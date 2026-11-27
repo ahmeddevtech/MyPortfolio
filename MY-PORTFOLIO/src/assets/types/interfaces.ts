@@ -32,6 +32,7 @@ export interface skill{
 }
 
 export interface project{
+  id: number,
   projectName: string,
   img: string,
   description: string,

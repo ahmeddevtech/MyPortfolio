@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 import { reactive } from "vue";
 
 export const useProjectStore = defineStore('projectStore', () => {
-  const projects: Array<project> = [
+  const projects: Array<project> = reactive([
     {
       id: 1,
       projectName: 'My Portfolio',
@@ -25,7 +25,7 @@ export const useProjectStore = defineStore('projectStore', () => {
       description: 'I built this python projects serie as a way to build projects and master python in the same time, Go head take a look about my python projects.',
       usedLanguages: ['Python'],
     },
-  ];
+  ]);
 
   function getProjectByID(ID: number): project | undefined {
     return projects.find((item) => item.id === ID);

@@ -1,6 +1,6 @@
 import type { service, skill } from "@/assets/types/interfaces";
 import { defineStore } from "pinia";
-import { reactive } from "vue";
+import { computed, reactive } from "vue";
 
 
 
@@ -32,6 +32,28 @@ export const useServicesStore = defineStore('servicesStore',() => {
   },
   ]);
 
-  const skills: Array<skill> = []
+  const skills: Array<skill> = reactive([
+    { skillName: "HTML", icon: "/icons/skills-icons/html5.svg" },
+    { skillName: "CSS", icon: "/icons/skills-icons/css3.svg" },
+    { skillName: "JavaScript", icon: "/icons/skills-icons/javascript.svg" },
+    { skillName: "TypeScript", icon: "/icons/skills-icons/typescript.svg" },
+    { skillName: "Vue.JS", icon: "/icons/skills-icons/vuejs.svg" },
+    { skillName: "TailwindCSS", icon: "/icons/skills-icons/tailwindcss.svg" },
+    { skillName: "C programming", icon: "/icons/skills-icons/c.svg" },
+    { skillName: "sketch", icon: "/icons/skills-icons/sketch.svg" },
+    { skillName: "python", icon: "/icons/skills-icons/python.svg" },
+    { skillName: "Java", icon: "/icons/skills-icons/java.svg" },
+    { skillName: "Git", icon: "/icons/skills-icons/git.svg" },
+  ]);
+
+  function getServiceByName(name: string): service | undefined {
+    return services.find((item) => item.serviceName.toLowerCase() === name.toLowerCase());
+  }
+
+  function getSkillByName(name: string): skill | undefined {
+    return skills.find((item) => item.skillName.toLowerCase() === name.toLowerCase());
+  }
+
+  return { services, skills, getServiceByName, getSkillByName };
 
 })

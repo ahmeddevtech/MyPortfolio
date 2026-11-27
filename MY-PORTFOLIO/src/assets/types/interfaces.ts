@@ -10,7 +10,6 @@ export interface MyInfo{
   work: 'student' | 'employe',
   generalDomain: 'Computer Sience',
   subDomains: Array<string>,
-  skills: Array<string>,
 }
 
 export interface service{

@@ -17,7 +17,6 @@ export const useMainStore = defineStore('mainStore',() => {
     work: 'student',
     generalDomain: 'Computer Sience',
     subDomains: ['Front-end Designer', 'Arduino controling'],
-    skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue.JS', 'TailwindCSS', 'C programming', 'sketch', 'python', 'Java', 'Git'],
   });
 
   function createDescription(Info: MyInfo): string {

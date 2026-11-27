@@ -1,4 +1,4 @@
-import type { MyInfo } from "@/assets/types/interfaces";
+import type { MyInfo, socialMediaAcc } from "@/assets/types/interfaces";
 import { defineStore } from "pinia";
 import {reactive} from "vue";
 
@@ -14,6 +14,23 @@ export const useMainStore = defineStore('mainStore',() => {
     city: 'Tlemcen',
     email: 'ahmed.benhamadi.dev@gmail.com',
     phoneNumber: '+213 563 66 45 62',
+    socialMediaAccounts:[
+      {
+        accountType: 'github',
+        url: 'https://github.com/ahmeddevtech',
+        icon: '/icons/socialMedia-icons/github.svg',
+      },
+      {
+        accountType: 'linkdin',
+        url: 'https://www.linkedin.com/in/benhamadi-ahmed-abdelkader-24555b3a9/',
+        icon: '/icons/socialMedia-icons/linkdin.svg',
+      },
+      {
+        accountType: 'telegram',
+        url: 'https://t.me/ahmed_dev0',
+        icon: '/icons/socialMedia-icons/telegram.svg',
+      },
+    ],
     work: 'student',
     generalDomain: 'Computer Sience',
     subDomains: ['Front-end Designer', 'Arduino controling'],
@@ -24,9 +41,14 @@ export const useMainStore = defineStore('mainStore',() => {
     return `${Info.generalDomain} student in ${Info.city}, ${Info.contry} — focused on ${domains}.`;
   }
 
+  function getSocialMediaAccByType(type: string): socialMediaAcc | undefined {
+    return myInfo.socialMediaAccounts.find((item) => item.accountType.toLowerCase() === type.toLowerCase());
+  }
+
   return{
     myInfo,
     createDescription,
+    getSocialMediaAccByType,
   }
 
 })

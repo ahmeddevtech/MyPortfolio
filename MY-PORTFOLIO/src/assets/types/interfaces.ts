@@ -7,9 +7,16 @@ export interface MyInfo{
   city: 'Tlemcen',
   email: 'ahmed.benhamadi.dev@gmail.com' | string,
   phoneNumber: string,
+  socialMediaAccounts: Array<socialMediaAcc>
   work: 'student' | 'employe',
   generalDomain: 'Computer Sience',
   subDomains: Array<string>,
+}
+
+export interface socialMediaAcc{
+  accountType: string,
+  url: string,
+  icon: string,
 }
 
 export interface service{

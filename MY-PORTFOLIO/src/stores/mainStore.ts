@@ -1,4 +1,4 @@
-import type { MyInfo } from "@/composibles/interfaces";
+import type { MyInfo } from "@/assets/interfaces/interfaces";
 import { defineStore } from "pinia";
 import {computed, reactive} from "vue";
 
@@ -9,6 +9,7 @@ export const useMainStore = defineStore('mainStore',() => {
     firstName: 'Benhamadi',
     lastName: 'Ahmed Abdelkader',
     age: year - 2007,
+    profileImg : '../../public/imgs/profileImg',
     contry: 'Algeria',
     city: 'Tlemcen',
     email: 'ahmed.benhamadi.dev@gmail.com',

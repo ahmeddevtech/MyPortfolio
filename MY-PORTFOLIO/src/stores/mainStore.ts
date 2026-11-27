@@ -1,6 +1,6 @@
 import type { MyInfo } from "@/assets/types/interfaces";
 import { defineStore } from "pinia";
-import {computed, reactive} from "vue";
+import {reactive} from "vue";
 
 const year = new Date().getFullYear();
 
@@ -9,7 +9,7 @@ export const useMainStore = defineStore('mainStore',() => {
     firstName: 'Benhamadi',
     lastName: 'Ahmed Abdelkader',
     age: year - 2007,
-    profileImg : '../../public/imgs/profileImg',
+    profileImg : '/imgs/profileImg',
     contry: 'Algeria',
     city: 'Tlemcen',
     email: 'ahmed.benhamadi.dev@gmail.com',
@@ -17,7 +17,7 @@ export const useMainStore = defineStore('mainStore',() => {
     work: 'student',
     generalDomain: 'Computer Sience',
     subDomains: ['Front-end Designer', 'Arduino controling'],
-    skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue.JS', 'TailwindCSS', 'C programming', 'C++ sketch', 'python', 'Java', 'Git'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue.JS', 'TailwindCSS', 'C programming', 'sketch', 'python', 'Java', 'Git'],
   });
 
   function createDescription(Info: MyInfo): string {

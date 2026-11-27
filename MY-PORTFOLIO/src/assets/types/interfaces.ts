@@ -12,3 +12,15 @@ export interface MyInfo{
   subDomains: Array<string>,
   skills: Array<string>,
 }
+
+export interface service{
+  serviceName: string,
+  icon: string,
+  description: string,
+  isAvailable: boolean,
+}
+
+export interface skill{
+  skillName:  string,
+  icon: string
+}

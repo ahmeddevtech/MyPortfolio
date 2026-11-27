@@ -35,5 +35,5 @@ export interface project{
   projectName: string,
   img: string,
   description: string,
-  usedLanguages: Array<skill>,
+  usedLanguages: Array<string>,
 }

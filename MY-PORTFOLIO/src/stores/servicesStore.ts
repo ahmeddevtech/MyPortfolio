@@ -1,6 +1,6 @@
 import type { service, skill } from "@/assets/types/interfaces";
 import { defineStore } from "pinia";
-import { computed, reactive } from "vue";
+import { reactive } from "vue";
 
 
 

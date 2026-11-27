@@ -3,13 +3,13 @@ export interface MyInfo{
   lastName: 'Ahmed Abdelkader',
   age: number,
   profileImg : string,
-  contry: 'Algeria',
+  country: 'Algeria',
   city: 'Tlemcen',
   email: 'ahmed.benhamadi.dev@gmail.com' | string,
   phoneNumber: string,
   socialMediaAccounts: Array<socialMediaAcc>
   work: 'student' | 'employe',
-  generalDomain: 'Computer Sience',
+  generalDomain: 'Computer Science',
   subDomains: Array<string>,
 }
 

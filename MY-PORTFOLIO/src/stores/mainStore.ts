@@ -10,7 +10,7 @@ export const useMainStore = defineStore('mainStore',() => {
     lastName: 'Ahmed Abdelkader',
     age: year - 2007,
     profileImg : '/imgs/profileImg',
-    contry: 'Algeria',
+    country: 'Algeria',
     city: 'Tlemcen',
     email: 'ahmed.benhamadi.dev@gmail.com',
     phoneNumber: '+213 563 66 45 62',
@@ -32,13 +32,15 @@ export const useMainStore = defineStore('mainStore',() => {
       },
     ],
     work: 'student',
-    generalDomain: 'Computer Sience',
+    generalDomain: 'Computer Science',
     subDomains: ['Front-end Designer', 'Arduino controling'],
   });
 
+  const description = createDescription(myInfo);
+
   function createDescription(Info: MyInfo): string {
     const domains = Info.subDomains.join(" & ");
-    return `${Info.generalDomain} student in ${Info.city}, ${Info.contry} — focused on ${domains}.`;
+    return `${Info.generalDomain} student in ${Info.city}, ${Info.country} — focused on ${domains}.`;
   }
 
   function getSocialMediaAccByType(type: string): socialMediaAcc | undefined {
@@ -47,6 +49,7 @@ export const useMainStore = defineStore('mainStore',() => {
 
   return{
     myInfo,
+    description,
     createDescription,
     getSocialMediaAccByType,
   }

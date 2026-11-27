@@ -1,4 +1,4 @@
-import type { MyInfo } from "@/assets/interfaces/interfaces";
+import type { MyInfo } from "@/assets/types/interfaces";
 import { defineStore } from "pinia";
 import {computed, reactive} from "vue";
 

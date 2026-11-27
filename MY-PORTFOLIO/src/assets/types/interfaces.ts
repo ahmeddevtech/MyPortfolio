@@ -23,3 +23,10 @@ export interface skill{
   skillName:  string,
   icon: string
 }
+
+export interface project{
+  projectName: string,
+  img: string,
+  description: string,
+  usedLanguages: Array<skill>,
+}
